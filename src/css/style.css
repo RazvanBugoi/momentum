@@ -18,5 +18,6 @@ label {
 }
 
 #greeting {
+    margin: 0 auto;
     font-size: 300%
 }
