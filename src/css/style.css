@@ -5,3 +5,15 @@
 label {
     display: block;
 }
+
+#time {
+    font-size: 1000%;
+}
+
+.todo {
+    font-size: 250%;
+}
+
+#greeting {
+    font-size: 300%
+}
