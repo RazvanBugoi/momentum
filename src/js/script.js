@@ -1,4 +1,4 @@
-let time = document.getElementById('time');
+let timeContainer = document.getElementById('time');
 
 
 let currentTime = new Date();
