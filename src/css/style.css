@@ -21,3 +21,10 @@ label {
     margin: 0 auto;
     font-size: 300%
 }
+
+#task {
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom-width: 3px;
+}
