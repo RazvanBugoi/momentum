@@ -1,3 +1,7 @@
+body {
+    background-image: url('https://source.unsplash.com/1600x900/?nature,water');
+}
+
 .container {
     text-align: center;
 }
@@ -23,8 +27,6 @@ label {
 }
 
 #task {
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
-    border-bottom-width: 3px;
+    border: 0;
+    border-bottom: 2px solid black;
 }
