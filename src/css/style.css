@@ -8,10 +8,6 @@ body {
     text-align: center;
 }
 
-label {
-    display: block;
-}
-
 #time {
     margin-top: 250px;
     margin-bottom: 0;
@@ -29,7 +25,10 @@ label {
 }
 
 #task {
+    margin: 0 auto;
+    display: block;
     width: 50%;
+    font-size: 40px;
     background: none;
     color: #ffffff;
     border: 0;

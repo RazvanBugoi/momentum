@@ -9,5 +9,6 @@ timeContainer.innerHTML = localTime;
 inputField.addEventListener("keypress", function onEvent(event) {
     if (event.key === 'Enter') {
         console.log(inputField.value);
+        localStorage.setItem('name', `${inputField.value}`);
     }
 })
