@@ -3,6 +3,7 @@ let inputField = document.getElementById('task');
 let listOfTodos = document.getElementById('todoItems');
 let user = document.getElementById("userName");
 let greetingMessage = document.getElementById('greeting');
+let changeNameBtn = document.getElementById('changeName');
 
 let currentTime = new Date();
 let localTime = `${currentTime.getHours()}:${currentTime.getMinutes()}`;
@@ -14,6 +15,12 @@ inputField.addEventListener("keypress", function onEvent(event) {
         localStorage.setItem('name', `${inputField.value}`);
     }
 })
+
+changeNameBtn.onclick = function deleteLocalStorage() {
+    localStorage.clear();
+    location.reload();
+    checkLocalStorage()
+};
 
 user.addEventListener("keypress", function onEvent(event) {
     if (event.key === "Enter") {
