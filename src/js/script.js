@@ -15,6 +15,14 @@ inputField.addEventListener("keypress", function onEvent(event) {
     }
 })
 
+user.addEventListener("keypress", function onEvent(event) {
+    if (event.key === "Enter") {
+        localStorage.setItem('name', `${user.value}`)
+        user.setAttribute("type", "hidden");
+        greetingMessage.innerHTML = `Good evening, ${localStorage.getItem('name')}`;
+    }
+})
+
 function checkLocalStorage() {
     if (localStorage.getItem('name') == null) {
         user.setAttribute('placeholder', 'add your name here');
@@ -25,16 +33,3 @@ function checkLocalStorage() {
 }
 
 checkLocalStorage();
-
-
-
-if (localStorage.getItem('name') == null) {
-    user.value == 'Add your name here';
-}
-user.addEventListener("keypress", function onEvent(event) {
-    if (event.key === "Enter") {
-        localStorage.setItem('name', `${user.value}`)
-        user.setAttribute("type", "hidden");
-        greetingMessage.innerHTML = `Good evening, ${localStorage.getItem('name')}`;
-    }
-})
