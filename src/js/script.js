@@ -4,6 +4,7 @@ let listOfTodos = document.getElementById('todoItems');
 let user = document.getElementById("userName");
 let greetingMessage = document.getElementById('greeting');
 let changeNameBtn = document.getElementById('changeName');
+let list = document.createElement('li');
 
 function checkTime(i) {
     if (i < 10) {
@@ -28,7 +29,10 @@ startTime();
 inputField.addEventListener("keypress", function onEvent(event) {
     if (event.key === 'Enter') {
         console.log(inputField.value);
-        localStorage.setItem('name', `${inputField.value}`);
+        localStorage.setItem('todo', `${inputField.value}`);
+        inputField.setAttribute('type', 'hidden');
+        list.innerHTML = localStorage.getItem('todo');
+        listOfTodos.appendChild(list);
     }
 })
 
