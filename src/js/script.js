@@ -39,7 +39,7 @@ inputField.addEventListener("keypress", function onEvent(event) {
 changeNameBtn.onclick = function deleteLocalStorage() {
     localStorage.clear();
     location.reload();
-    checkLocalStorage()
+    checkLocalStorageName()
 };
 
 user.addEventListener("keypress", function onEvent(event) {
@@ -50,7 +50,7 @@ user.addEventListener("keypress", function onEvent(event) {
     }
 })
 
-function checkLocalStorage() {
+function checkLocalStorageName() {
     if (localStorage.getItem('name') == null) {
         user.setAttribute('placeholder', 'add your name here');
     } else {
@@ -59,4 +59,4 @@ function checkLocalStorage() {
     }
 }
 
-checkLocalStorage();
+checkLocalStorageName();
