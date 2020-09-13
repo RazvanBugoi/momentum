@@ -5,10 +5,6 @@ let user = document.getElementById("userName");
 let greetingMessage = document.getElementById('greeting');
 let changeNameBtn = document.getElementById('changeName');
 
-// let currentTime = new Date();
-// // let localTime = `${currentTime.getHours()}:${currentTime.getMinutes()}`;
-// // timeContainer.innerHTML = localTime;
-
 function checkTime(i) {
     if (i < 10) {
         i = "0" + i;
