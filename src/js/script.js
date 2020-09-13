@@ -60,3 +60,15 @@ function checkLocalStorageName() {
 }
 
 checkLocalStorageName();
+
+function checkLocalStorageTodo() {
+    if (localStorage.getItem('todo') == null) {
+        inputField.setAttribute('placeholder', 'Enter Task Here');
+    } else {
+        inputField.setAttribute('type', 'hidden');
+        list.innerHTML = localStorage.getItem('todo');
+        listOfTodos.appendChild(list);
+    }
+}
+
+checkLocalStorageTodo();
