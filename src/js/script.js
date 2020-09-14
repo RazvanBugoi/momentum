@@ -47,7 +47,7 @@ inputField.addEventListener("keypress", function onEvent(event) {
 })
 
 changeNameBtn.onclick = function deleteLocalStorage() {
-    localStorage.clear();
+    localStorage.removeItem('name');
     location.reload();
     checkLocalStorageName()
 };
