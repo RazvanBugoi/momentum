@@ -24,7 +24,7 @@ function startTime() {
     timeContainer.innerHTML = hours + ":" + minutes;
     const timer = setTimeout(function() {
         startTime()
-    }, 1000);
+    }, 60000);
 }
 startTime();
 
