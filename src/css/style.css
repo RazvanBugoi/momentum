@@ -42,3 +42,8 @@ body {
 input:focus {
     outline: none;
 }
+
+#todoItems {
+    display: inline-block;
+    font-size: 30px;
+}

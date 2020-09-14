@@ -5,6 +5,8 @@ let user = document.getElementById("userName");
 let greetingMessage = document.getElementById('greeting');
 let changeNameBtn = document.getElementById('changeName');
 let list = document.createElement('li');
+// let editBtn = document.createElement('button');
+// let deleteBtn = document.createElement('button');
 
 function checkTime(i) {
     if (i < 10) {
@@ -33,6 +35,14 @@ inputField.addEventListener("keypress", function onEvent(event) {
         inputField.setAttribute('type', 'hidden');
         list.innerHTML = localStorage.getItem('todo');
         listOfTodos.appendChild(list);
+        // editBtn.setAttribute('type', 'button');
+        // deleteBtn.setAttribute('type', 'button');
+        // editBtn.setAttribute('id', 'edit');
+        // deleteBtn.setAttribute('id', 'delete');
+        // editBtn.innerHTML = 'Edit';
+        // deleteBtn.innerHTML = 'Delete';
+        // list.appendChild(editBtn);
+        // list.appendChild(deleteBtn);
     }
 })
 
@@ -72,3 +82,8 @@ function checkLocalStorageTodo() {
 }
 
 checkLocalStorageTodo();
+
+list.addEventListener('dblclick', function(event) {
+    localStorage.removeItem('todo');
+    location.reload()
+})
