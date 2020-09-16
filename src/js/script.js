@@ -62,7 +62,7 @@ user.addEventListener("keypress", function onEvent(event) {
 
 function checkLocalStorageName() {
     if (localStorage.getItem('name') == null) {
-        user.setAttribute('placeholder', 'add your name here');
+        user.setAttribute('placeholder', 'name');
     } else {
         user.setAttribute("type", "hidden");
         greetingMessage.innerHTML = `Good evening, ${localStorage.getItem('name')}`;
