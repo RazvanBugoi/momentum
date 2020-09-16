@@ -45,6 +45,7 @@ input:focus {
 
 #userName {
     border: 0;
+    border-bottom: 2px solid #ffffff;
     height: 2.5em;
     width: 8em;
     font-size: 0.4em;
