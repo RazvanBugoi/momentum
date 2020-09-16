@@ -43,6 +43,15 @@ input:focus {
     outline: none;
 }
 
+#userName {
+    border: 0;
+    height: 2.5em;
+    width: 8em;
+    font-size: 0.4em;
+    background: none;
+    color: #ffffff;
+}
+
 #todoItems {
     display: inline-block;
     font-size: 30px;
