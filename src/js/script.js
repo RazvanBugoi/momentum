@@ -5,6 +5,7 @@ let user = document.getElementById("userName");
 let greetingMessage = document.getElementById('greeting');
 let changeNameBtn = document.getElementById('changeName');
 let list = document.createElement('li');
+let todoInput = document.getElementById('todo-input');
 
 function checkTime(i) {
     if (i < 10) {
@@ -26,13 +27,13 @@ function startTime() {
 }
 startTime();
 
-inputField.addEventListener("keypress", function onEvent(event) {
+todoInput.addEventListener("keypress", function onEvent(event) {
     if (event.key === 'Enter') {
-        console.log(inputField.value);
-        localStorage.setItem('todo', `${inputField.value}`);
-        inputField.style.display = 'none';
-        list.innerHTML = localStorage.getItem('todo');
-        listOfTodos.appendChild(list);
+        console.log(todoInput.innerHTML);
+        localStorage.setItem('todo', `${todoInput.innerHTML}`);
+        // inputField.style.display = 'none';
+        todoInput.innerHTML = localStorage.getItem('todo');
+        document.getElementById('checkbox').appendChild(todoInput);
     }
 })
 
@@ -62,11 +63,11 @@ checkLocalStorageName();
 
 function checkLocalStorageTodo() {
     if (localStorage.getItem('todo') == null) {
-        inputField.setAttribute('placeholder', 'Enter Task Here');
+        todoInput.innerHTML;
     } else {
-        inputField.style.display = 'none';
-        list.innerHTML = localStorage.getItem('todo');
-        listOfTodos.appendChild(list);
+        // inputField.style.display = 'none';
+        todoInput.innerHTML = localStorage.getItem('todo');
+        document.getElementById('checkbox').appendChild(todoInput);
     }
 }
 
