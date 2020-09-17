@@ -11,24 +11,20 @@ body {
 #time {
     margin-top: 250px;
     margin-bottom: 0;
-    font-size: 1000%;
 }
 
 .todo {
     margin-top: 50px;
-    font-size: 250%;
 }
 
 #greeting {
     margin: 0 auto;
-    font-size: 300%
 }
 
 #task {
     margin: 0 auto;
     display: block;
     width: 50%;
-    font-size: 40px;
     background: none;
     color: #ffffff;
     border: 0;
@@ -51,7 +47,6 @@ input::placeholder {
     border: 0;
     border-bottom: 2px solid #ffffff;
     width: 5em;
-    font-size: 0.75em;
     font-family: inherit;
     background: none;
     color: #ffffff;
@@ -59,5 +54,4 @@ input::placeholder {
 
 #todoItems {
     display: inline-block;
-    font-size: 30px;
 }
