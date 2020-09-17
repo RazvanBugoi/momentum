@@ -38,6 +38,10 @@ input:focus {
     outline: none;
 }
 
+span:focus {
+    outline: none;
+}
+
 input::placeholder {
     color: #ffffff;
     text-align: center;
