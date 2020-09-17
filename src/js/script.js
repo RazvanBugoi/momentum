@@ -59,7 +59,6 @@ function checkLocalStorageName() {
     if (localStorage.getItem('name') == null) {
         user.setAttribute('placeholder', 'name');
     } else {
-        user.setAttribute("contenteditable", "false");
         greetingMessage.innerHTML = `Good evening, ${localStorage.getItem('name')}`;
     }
 }
