@@ -34,16 +34,13 @@ body {
     border-bottom: 2px solid #ffffff;
 }
 
-#task::placeholder {
-    text-align: center;
-}
-
 input:focus {
     outline: none;
 }
 
 input::placeholder {
     color: #ffffff;
+    text-align: center;
 }
 
 #userName {
