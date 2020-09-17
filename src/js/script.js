@@ -32,7 +32,7 @@ inputField.addEventListener("keypress", function onEvent(event) {
     if (event.key === 'Enter') {
         console.log(inputField.value);
         localStorage.setItem('todo', `${inputField.value}`);
-        inputField.setAttribute('type', 'hidden');
+        inputField.style.display = 'none';
         list.innerHTML = localStorage.getItem('todo');
         listOfTodos.appendChild(list);
         // editBtn.setAttribute('type', 'button');
@@ -50,7 +50,7 @@ inputField.addEventListener("keypress", function onEvent(event) {
 user.addEventListener("keypress", function onEvent(event) {
     if (event.key === "Enter") {
         localStorage.setItem('name', `${user.value}`)
-        user.setAttribute("type", "hidden");
+        user.setAttribute("contenteditable", "false");
         greetingMessage.innerHTML = `Good evening, ${localStorage.getItem('name')}`;
     }
 })
@@ -59,7 +59,7 @@ function checkLocalStorageName() {
     if (localStorage.getItem('name') == null) {
         user.setAttribute('placeholder', 'name');
     } else {
-        user.setAttribute("type", "hidden");
+        user.setAttribute("contenteditable", "false");
         greetingMessage.innerHTML = `Good evening, ${localStorage.getItem('name')}`;
     }
 }
@@ -70,7 +70,7 @@ function checkLocalStorageTodo() {
     if (localStorage.getItem('todo') == null) {
         inputField.setAttribute('placeholder', 'Enter Task Here');
     } else {
-        inputField.setAttribute('type', 'hidden');
+        inputField.style.display = 'none';
         list.innerHTML = localStorage.getItem('todo');
         listOfTodos.appendChild(list);
     }
@@ -81,4 +81,9 @@ checkLocalStorageTodo();
 list.addEventListener('dblclick', function(event) {
     localStorage.removeItem('todo');
     location.reload()
+})
+
+user.addEventListener('dblclick', (event) => {
+    localStorage.removeItem('name');
+    checkLocalStorageName();
 })
