@@ -19,6 +19,10 @@ body {
     margin-top: 50px;
 }
 
+#todo-input {
+    border-bottom: 2px solid #ffffff;
+}
+
 #greeting {
     margin: 0 auto;
 }
