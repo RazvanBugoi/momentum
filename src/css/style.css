@@ -50,8 +50,7 @@ input::placeholder {
 #userName {
     border: 0;
     border-bottom: 2px solid #ffffff;
-    height: 2.5em;
-    width: 8em;
+    width: 5em;
     font-size: 0.75em;
     font-family: inherit;
     background: none;
