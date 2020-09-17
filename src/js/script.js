@@ -49,7 +49,7 @@ inputField.addEventListener("keypress", function onEvent(event) {
 
 user.addEventListener("keypress", function onEvent(event) {
     if (event.key === "Enter") {
-        localStorage.setItem('name', `${user.value}`)
+        localStorage.setItem('name', `${user.innerHTML}`)
         user.setAttribute("contenteditable", "false");
         greetingMessage.innerHTML = `Good evening, ${localStorage.getItem('name')}`;
     }
