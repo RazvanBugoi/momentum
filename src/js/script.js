@@ -5,8 +5,6 @@ let user = document.getElementById("userName");
 let greetingMessage = document.getElementById('greeting');
 let changeNameBtn = document.getElementById('changeName');
 let list = document.createElement('li');
-// let editBtn = document.createElement('button');
-// let deleteBtn = document.createElement('button');
 
 function checkTime(i) {
     if (i < 10) {
@@ -35,14 +33,6 @@ inputField.addEventListener("keypress", function onEvent(event) {
         inputField.style.display = 'none';
         list.innerHTML = localStorage.getItem('todo');
         listOfTodos.appendChild(list);
-        // editBtn.setAttribute('type', 'button');
-        // deleteBtn.setAttribute('type', 'button');
-        // editBtn.setAttribute('id', 'edit');
-        // deleteBtn.setAttribute('id', 'delete');
-        // editBtn.innerHTML = 'Edit';
-        // deleteBtn.innerHTML = 'Delete';
-        // list.appendChild(editBtn);
-        // list.appendChild(deleteBtn);
     }
 })
 
@@ -51,7 +41,8 @@ user.addEventListener("keypress", function onEvent(event) {
     if (event.key === "Enter") {
         localStorage.setItem('name', `${user.innerHTML}`)
         user.setAttribute("contenteditable", "false");
-        greetingMessage.innerHTML = `Good evening, ${localStorage.getItem('name')}`;
+        user.innerHTML = `${localStorage.getItem('name')}.`;
+        user.style.border = 0;
     }
 })
 
@@ -59,7 +50,11 @@ function checkLocalStorageName() {
     if (localStorage.getItem('name') == null) {
         user.setAttribute('placeholder', 'name');
     } else {
-        greetingMessage.innerHTML = `Good evening, ${localStorage.getItem('name')}`;
+        greetingMessage.innerHTML = 'Good evening,' + ' ';
+        user.innerHTML = `${localStorage.getItem('name')}.`;
+        user.setAttribute('contenteditable', 'false');
+        user.style.border = 0;
+        greetingMessage.appendChild(user)
     }
 }
 
@@ -84,5 +79,7 @@ list.addEventListener('dblclick', function(event) {
 
 user.addEventListener('dblclick', (event) => {
     localStorage.removeItem('name');
+    user.setAttribute('contenteditable', 'true');
+    user.style.borderBottom = '2px solid #ffffff';
     checkLocalStorageName();
 })
