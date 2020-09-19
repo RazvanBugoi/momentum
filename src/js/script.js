@@ -72,9 +72,11 @@ function checkLocalStorageTodo() {
 
 checkLocalStorageTodo();
 
-list.addEventListener('dblclick', function(event) {
+todoInput.addEventListener('dblclick', function(event) {
     localStorage.removeItem('todo');
-    location.reload()
+    todoInput.setAttribute('contenteditable', 'true');
+    todoInput.style.borderBottom = '2px solid #ffffff';
+    checkLocalStorageTodo();
 })
 
 user.addEventListener('dblclick', (event) => {
