@@ -62,11 +62,11 @@ checkLocalStorageName();
 
 function checkLocalStorageTodo() {
     if (localStorage.getItem('todo') == null) {
-        todoInput.innerHTML;
+        todoInput.setAttribute('placeholder', 'enter task here');
     } else {
-        // inputField.style.display = 'none';
         todoInput.innerHTML = localStorage.getItem('todo');
-        // document.getElementById('checkbox').appendChild(todoInput);
+        todoInput.setAttribute('contenteditable', 'false');
+        todoInput.style.border = 0;
     }
 }
 
