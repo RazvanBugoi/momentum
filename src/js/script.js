@@ -33,7 +33,7 @@ todoInput.addEventListener("keypress", function onEvent(event) {
         localStorage.setItem('todo', `${todoInput.innerHTML}`);
         // inputField.style.display = 'none';
         todoInput.innerHTML = localStorage.getItem('todo');
-        document.getElementById('checkbox').appendChild(todoInput);
+        // document.getElementById('checkbox').appendChild(todoInput);
     }
 })
 
@@ -67,7 +67,7 @@ function checkLocalStorageTodo() {
     } else {
         // inputField.style.display = 'none';
         todoInput.innerHTML = localStorage.getItem('todo');
-        document.getElementById('checkbox').appendChild(todoInput);
+        // document.getElementById('checkbox').appendChild(todoInput);
     }
 }
 
