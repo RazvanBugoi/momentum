@@ -20,6 +20,7 @@ body {
 }
 
 #todo-input {
+    display: inline-block;
     border-bottom: 2px solid #ffffff;
 }
 

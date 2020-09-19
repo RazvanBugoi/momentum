@@ -29,11 +29,10 @@ startTime();
 
 todoInput.addEventListener("keypress", function onEvent(event) {
     if (event.key === 'Enter') {
-        console.log(todoInput.innerHTML);
         localStorage.setItem('todo', `${todoInput.innerHTML}`);
-        // inputField.style.display = 'none';
+        todoInput.setAttribute("contenteditable", "false");
         todoInput.innerHTML = localStorage.getItem('todo');
-        // document.getElementById('checkbox').appendChild(todoInput);
+        todoInput.style.border = 0;
     }
 })
 
