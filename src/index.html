@@ -20,7 +20,7 @@
             <!-- <input type="text" id="task" name="task" placeholder='enter task here' required="required" minlength="3" maxlength="20" size="20"> -->
         </div>
         <div class="todoList">
-            <input id="checkbox" type='checkbox'>
+            <input id="checkbox" type='checkbox' onchange="lineThrough(this)">
             <span id='todo-input' contenteditable="true">Enter task for today</span>
             <button id='deleteBtn'> 
                 <img id="image" src="images/cross.png" height="15" width='15' alt="cross icon">

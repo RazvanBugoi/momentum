@@ -85,3 +85,11 @@ user.addEventListener('dblclick', (event) => {
     user.style.borderBottom = '2px solid #ffffff';
     checkLocalStorageName();
 })
+
+function lineThrough(checkboxElement) {
+    if (checkboxElement.checked) {
+        todoInput.style.textDecoration = 'line-through';
+    } else {
+        todoInput.style.textDecoration = 'none';
+    }
+}
