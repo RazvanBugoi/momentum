@@ -72,17 +72,25 @@ function checkLocalStorageTodo() {
 checkLocalStorageTodo();
 
 todoInput.addEventListener('dblclick', function(event) {
-    localStorage.removeItem('todo');
     todoInput.setAttribute('contenteditable', 'true');
     todoInput.style.borderBottom = '2px solid #ffffff';
-    checkLocalStorageTodo();
+    if (localStorage.getItem('todo') != todoInput.innerHTML) {
+        localStorage.removeItem('todo')
+        checkLocalStorageTodo()
+    } else {
+        todoInput.setAttribute('contenteditable', 'false');
+    }
 })
 
 user.addEventListener('dblclick', (event) => {
-    localStorage.removeItem('name');
     user.setAttribute('contenteditable', 'true');
     user.style.borderBottom = '2px solid #ffffff';
-    checkLocalStorageName();
+    if (`${localStorage.getItem('name')}.` != user.innerHTML) {
+        localStorage.removeItem('name')
+        checkLocalStorageName()
+    } else {
+        user.setAttribute('contenteditable', 'false');
+    }
 })
 
 function lineThrough(checkboxElement) {
