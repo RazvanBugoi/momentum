@@ -1,10 +1,8 @@
 let timeContainer = document.getElementById('time');
 let inputField = document.getElementById('task');
-let listOfTodos = document.getElementById('todoItems');
 let user = document.getElementById("userName");
 let greetingMessage = document.getElementById('greeting');
 let changeNameBtn = document.getElementById('changeName');
-let list = document.createElement('li');
 let todoInput = document.getElementById('todo-input');
 let deleteBtn = document.getElementById('deleteBtn');
 
@@ -97,6 +95,5 @@ function lineThrough(checkboxElement) {
 
 function deleteTask() {
     localStorage.removeItem('todo');
-    // it removes the todo item from localStorage but doesn't change the value of todoInput
     todoInput.innerHTML = 'enter task';
 }
