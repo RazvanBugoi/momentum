@@ -94,3 +94,9 @@ function lineThrough(checkboxElement) {
         todoInput.style.textDecoration = 'none';
     }
 }
+
+function deleteTask() {
+    localStorage.removeItem('todo');
+    // it removes the todo item from localStorage but doesn't change the value of todoInput
+    todoInput.innerHTML = 'enter task';
+}
