@@ -6,6 +6,7 @@ let greetingMessage = document.getElementById('greeting');
 let changeNameBtn = document.getElementById('changeName');
 let list = document.createElement('li');
 let todoInput = document.getElementById('todo-input');
+let deleteBtn = document.getElementById('deleteBtn');
 
 function checkTime(i) {
     if (i < 10) {
