@@ -78,7 +78,7 @@ todoInput.addEventListener('dblclick', function(event) {
         localStorage.removeItem('todo')
         checkLocalStorageTodo()
     } else {
-        todoInput.setAttribute('contenteditable', 'false');
+        todo.setAttribute('contenteditable', 'false');
     }
 })
 
