@@ -85,12 +85,12 @@ todoInput.addEventListener('dblclick', function(event) {
 user.addEventListener('dblclick', (event) => {
     user.setAttribute('contenteditable', 'true');
     user.style.borderBottom = '2px solid #ffffff';
-    if (`${localStorage.getItem('name')}.` != user.innerHTML) {
-        localStorage.removeItem('name')
-        checkLocalStorageName()
-    } else {
-        user.setAttribute('contenteditable', 'false');
-    }
+    // if (`${localStorage.getItem('name')}.` != user.innerHTML) {
+    //     localStorage.removeItem('name')
+    //     checkLocalStorageName()
+    // } else {
+    //     user.setAttribute('contenteditable', 'false');
+    // }
 })
 
 function lineThrough(checkboxElement) {
