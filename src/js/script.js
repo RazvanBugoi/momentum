@@ -94,13 +94,6 @@ user.addEventListener('dblclick', (event) => {
     // }
 })
 
-// function lineThrough(checkboxElement) {
-//     if (checkboxElement.checked) {
-//         todoInput.style.textDecoration = 'line-through';
-//     } else {
-//         todoInput.style.textDecoration = 'none';
-//     }
-// }
 
 function deleteTask() {
     localStorage.removeItem('todo');
