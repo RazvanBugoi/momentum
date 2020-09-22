@@ -5,6 +5,7 @@ let greetingMessage = document.getElementById('greeting');
 let changeNameBtn = document.getElementById('changeName');
 let todoInput = document.getElementById('todo-input');
 let deleteBtn = document.getElementById('deleteBtn');
+let squareBox = document.getElementById('squarebox');
 
 function checkTime(i) {
     if (i < 10) {
@@ -93,15 +94,27 @@ user.addEventListener('dblclick', (event) => {
     // }
 })
 
-function lineThrough(checkboxElement) {
-    if (checkboxElement.checked) {
-        todoInput.style.textDecoration = 'line-through';
-    } else {
-        todoInput.style.textDecoration = 'none';
-    }
-}
+// function lineThrough(checkboxElement) {
+//     if (checkboxElement.checked) {
+//         todoInput.style.textDecoration = 'line-through';
+//     } else {
+//         todoInput.style.textDecoration = 'none';
+//     }
+// }
 
 function deleteTask() {
     localStorage.removeItem('todo');
     todoInput.innerHTML = 'enter task';
 }
+
+squareBox.onclick = swapClass;
+
+function swapClass() {
+    if (squareBox.className === 'far fa-square fa-xs') {
+        squareBox.className = 'far fa-check-square fa-xs';
+        todoInput.style.textDecoration = 'line-through';
+    } else {
+        squareBox.className = 'far fa-square fa-xs';
+        todoInput.style.textDecoration = 'none';
+    }
+};
