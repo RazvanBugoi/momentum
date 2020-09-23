@@ -21,6 +21,10 @@ body {
     margin-top: 50px;
 }
 
+i:hover {
+    cursor: pointer;
+}
+
 #todo-input {
     display: inline-block;
     border-bottom: 2px solid #ffffff;
