@@ -4,7 +4,6 @@ let user = document.getElementById("userName");
 let greetingMessage = document.getElementById('greeting');
 let changeNameBtn = document.getElementById('changeName');
 let todoInput = document.getElementById('todo-input');
-let deleteBtn = document.getElementById('deleteBtn');
 let squareBox = document.getElementById('squarebox');
 
 function checkTime(i) {
@@ -86,12 +85,6 @@ todoInput.addEventListener('dblclick', function(event) {
 user.addEventListener('dblclick', (event) => {
     user.setAttribute('contenteditable', 'true');
     user.style.borderBottom = '2px solid #ffffff';
-    // if (`${localStorage.getItem('name')}.` != user.innerHTML) {
-    //     localStorage.removeItem('name')
-    //     checkLocalStorageName()
-    // } else {
-    //     user.setAttribute('contenteditable', 'false');
-    // }
 })
 
 
