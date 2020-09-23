@@ -66,6 +66,8 @@ function checkLocalStorageTodo() {
         todoInput.innerHTML = localStorage.getItem('todo');
         todoInput.setAttribute('contenteditable', 'false');
         todoInput.style.border = 0;
+        todoInput.style.textDecoration = localStorage.getItem('textDecoration');
+        squareBox.className = localStorage.getItem('checkbox') || 'far fa-square fa-xs';
     }
 }
 
@@ -99,8 +101,12 @@ function swapClass() {
     if (squareBox.className === 'far fa-square fa-xs') {
         squareBox.className = 'far fa-check-square fa-xs';
         todoInput.style.textDecoration = 'line-through';
+        localStorage.setItem('textDecoration', 'line-through');
+        localStorage.setItem('checkbox', 'far fa-check-square fa-xs');
     } else {
         squareBox.className = 'far fa-square fa-xs';
         todoInput.style.textDecoration = 'none';
+        localStorage.setItem('textDecoration', 'none');
+        localStorage.setItem('checkbox', 'far fa-square fa-xs');
     }
 };
