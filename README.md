@@ -25,3 +25,8 @@ While working on this project, I've improved my knowledge of HTML, CSS and JavaS
 * contenteditable attribute
 * how to use localStorage to change elements class name in HTML with JavaScript
 * and more...
+
+
+## Demonstration 
+
+![demonstration.gif](/demonstration.gif)
