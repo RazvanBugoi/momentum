@@ -47,7 +47,7 @@ user.addEventListener("keypress", function onEvent(event) {
 
 function checkLocalStorageName() {
     if (localStorage.getItem('name') == null) {
-        user.setAttribute('placeholder', 'name');
+        user.setAttribute('placeholder', 'enter name');
     } else {
         greetingMessage.innerHTML = 'Good evening,' + ' ';
         user.innerHTML = `${localStorage.getItem('name')}.`;
@@ -80,13 +80,22 @@ todoInput.addEventListener('dblclick', function(event) {
         localStorage.removeItem('todo')
         checkLocalStorageTodo()
     } else {
-        todo.setAttribute('contenteditable', 'false');
+        todoInput.setAttribute('contenteditable', 'false');
     }
 })
 
 user.addEventListener('dblclick', (event) => {
     user.setAttribute('contenteditable', 'true');
     user.style.borderBottom = '2px solid #ffffff';
+})
+
+user.addEventListener('blur', (event) => {
+    if (localStorage.getItem('name') == user.innerHTML) {
+        user.innerHTML = localStorage.getItem('name');
+    } else {
+        user.innerHTML = 'enter name';
+        localStorage.removeItem('name');
+    }
 })
 
 
